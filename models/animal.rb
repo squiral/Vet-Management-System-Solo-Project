@@ -36,6 +36,11 @@ class Animal
     SqlRunner.run( sql )
   end
 
+  def vet()
+    vet = Vet.find(@vet_id)
+    return vet
+  end
+
   def update()
     sql = "UPDATE animals
     SET
