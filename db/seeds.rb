@@ -14,10 +14,18 @@ vet1.save()
 animal1 = Animal.new({
   "name" => "Alfie",
   "date_of_birth" => "10/01/12",
-  "type" => "dog",
+  "type" => "Dog",
+  "vet_id" => vet1.id
+  })
+
+animal2 = Animal.new({
+  "name" => "Mabel",
+  "date_of_birth" => "25/10/09",
+  "type" => "Cat",
   "vet_id" => vet1.id
   })
 
 animal1.save()
+animal2.save()
 
-p Animal.find(animal1.id)
+p Animal.all()
