@@ -6,7 +6,7 @@ class Animal
   attr_accessor( :name, :date_of_birth, :type, :treatment_notes, :vet_id )
 
   def initialize( options )
-    @id = options['id'].to_i if options['id']
+    @id = options['id'].to_i
     @name = options['name']
     @date_of_birth = options['date_of_birth']
     @type = options['type']
