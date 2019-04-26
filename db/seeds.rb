@@ -19,3 +19,5 @@ animal1 = Animal.new({
   })
 
   animal1.save()
+
+  p animal1.vet()

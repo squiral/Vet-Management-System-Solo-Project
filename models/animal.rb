@@ -3,7 +3,7 @@ require_relative( '../db/sql_runner' )
 class Animal
 
   attr_reader( :id )
-  attr_writer( :name, :date_of_birth, :type, :vet_id )
+  attr_accessor( :name, :date_of_birth, :type, :vet_id )
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
@@ -34,6 +34,11 @@ class Animal
   def self.delete_all()
     sql = "DELETE FROM animals"
     SqlRunner.run( sql )
+  end
+
+  def vet()
+    vet = Vet.find(@vet_id)
+    return vet
   end
 
 
