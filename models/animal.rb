@@ -10,7 +10,7 @@ class Animal
     @name = options['name']
     @date_of_birth = options['date_of_birth']
     @type = options['type']
-    @vet_id = options['vet_id'].to_i
+    @vet_id = options['vet_id']
   end
 
   def save()
@@ -34,11 +34,6 @@ class Animal
   def self.delete_all()
     sql = "DELETE FROM animals"
     SqlRunner.run( sql )
-  end
-
-  def vet()
-    vet = Vet.find(@vet_id)
-    return vet
   end
 
   def update()
@@ -84,6 +79,8 @@ class Animal
     animal = Animal.new(result)
     return animal
   end
+
+
 
 
 

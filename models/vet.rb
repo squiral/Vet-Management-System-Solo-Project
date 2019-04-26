@@ -48,6 +48,14 @@ class Vet
     return vet
   end
 
+  def delete()
+    sql = "DELETE FROM vets
+    WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
+
   def self.all()
     sql = "SELECT * FROM vets"
     vet_data = SqlRunner.run(sql)

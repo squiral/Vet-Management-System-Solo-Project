@@ -33,4 +33,17 @@ animal2 = Animal.new({
 animal1.save()
 animal2.save()
 
-vet1.delete()
+p Vet.all()
+
+p Vet.find(vet2.id)
+
+p vet2.name
+
+vet2.name = "Dr. Lazenby"
+
+vet2.update
+
+p vet2.name
+
+
+vet2.delete()
