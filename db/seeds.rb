@@ -6,10 +6,15 @@ Animal.delete_all()
 Vet.delete_all()
 
 vet1 = Vet.new({
-  "name" => "Dr.Smith",
+  "name" => "Dr. Smith",
+})
+
+vet2 = Vet.new({
+  "name" => "Dr. Russell",
 })
 
 vet1.save()
+vet2.save()
 
 animal1 = Animal.new({
   "name" => "Alfie",
@@ -22,10 +27,16 @@ animal2 = Animal.new({
   "name" => "Mabel",
   "date_of_birth" => "25/10/09",
   "type" => "Cat",
-  "vet_id" => vet1.id
+  "vet_id" => vet2.id
   })
 
 animal1.save()
 animal2.save()
 
-p Animal.all()
+p vet2.name
+
+vet2.name = "Dr. Maxwell"
+
+vet2.update()
+
+p vet2.name
