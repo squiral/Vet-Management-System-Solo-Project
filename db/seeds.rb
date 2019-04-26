@@ -20,6 +20,7 @@ animal1 = Animal.new({
   "name" => "Alfie",
   "date_of_birth" => "10/01/12",
   "type" => "Dog",
+  "treatment_notes" => " ",
   "vet_id" => vet1.id
   })
 
@@ -27,6 +28,7 @@ animal2 = Animal.new({
   "name" => "Mabel",
   "date_of_birth" => "25/10/09",
   "type" => "Cat",
+  "treatment_notes" => " ",
   "vet_id" => vet2.id
   })
 
