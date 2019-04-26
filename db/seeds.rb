@@ -20,10 +20,4 @@ animal1 = Animal.new({
 
 animal1.save()
 
-p animal1
-
-animal1.name = "Oscar"
-
-animal1.update()
-
-p animal1
+p Animal.find(animal1.id)
