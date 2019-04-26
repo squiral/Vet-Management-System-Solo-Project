@@ -33,16 +33,4 @@ animal2 = Animal.new({
 animal1.save()
 animal2.save()
 
-# p vet2.name
-#
-# vet2.name = "Dr. Maxwell"
-#
-# vet2.update()
-#
-# p vet2.name
-#
-# vet2.delete()
-
-animal1.name = "Frankie"
-
-animal1.update()
+vet1.delete()
