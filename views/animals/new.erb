@@ -1,21 +1,21 @@
-<form class="animal_form" action="/animals" method="post">
+<h2 class="title">Register Animal</h2>
+  <form class="animal_form" action="/animals" method="post">
+      <label for="name-field" class="form_padding">Name:</label>
+      <input type="text" name="name" required id="name-field"/>
 
-    <label for="name-field">Name:</label>
-    <input type="text" name="name" required id="name-field"/>
+      <label for="date_of_birth-field" class="form_padding">Date of Birth:</label>
+      <input type="text" name="date_of_birth" id="date_of_birth-field"/>
 
-    <label for="date_of_birth-field">Date of Birth:</label>
-    <input type="text" name="date_of_birth" id="date_of_birth-field"/>
+      <label for="type-field" class="form_padding">Type:</label>
+      <input type="text" name="type" id="type-field"/>
 
-    <label for="type-field">Type:</label>
-    <input type="text" name="type" id="type-field"/>
+      <label for="vet-select" class="form_padding">Select Veterinarian</label>
+      <select name="vet_id" id="vet_select">
+        <% @vets.each do |vet| %>
+          <option value=<%= vet.id %>><%= vet.name.capitalize %></option>
+        <% end %>
+      </select>
 
-    <label for="vet-select">Select Veterinarian</label>
-    <select name="vet_id" id="vet_select">
-      <% @vets.each do |vet| %>
-        <option value=<%= vet.id %>><%= vet.name.capitalize %></option>
-      <% end %>
-    </select>
+      <input type="submit" value="Register" class="form_padding">
 
-    <input type="submit" value="Register">
-
-</form>
+  </form>

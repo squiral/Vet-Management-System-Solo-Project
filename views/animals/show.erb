@@ -1,11 +1,11 @@
-<h2> <%= @animal.name.capitalize %></h2>
-<h3> <%= @animal.type %></h3>
+<h2 class="title"> <%= @animal.name.capitalize %></h2>
+<div class="animal_info">
+  <h3> <%= @animal.vet.name() %></h3>
 
 
-<p>DoB: <%= @animal.date_of_birth() %></p>
-<p>Vet: <%= @animal.vet.name() %></p>
-<p>Treatment Notes: <%= @animal.treatment_notes() %></p>
+  <p>DoB: <%= @animal.date_of_birth() %></p>
+  <p>Type: <%= @animal.type() %></p>
+  <p>Treatment Notes: <%= @animal.treatment_notes() %></p>
 
 
-
-<p></p>
+</div>

@@ -1,10 +1,10 @@
-<h2>Animals</h2>
+<h2 class="title">Animals</h2>
 
-
+<div class="animal_info">
 <% @animals.each do |animal| %>
 
   <div class="animal">
-    <p>Name: <%= animal.name() %></p>
+    <h3><%= animal.name() %></h3>
     <p>DoB: <%= animal.date_of_birth() %></p>
     <p>Type: <%= animal.type() %></p>
     <p>Vet: <%= animal.vet.name() %></p>
@@ -12,3 +12,4 @@
   </div>
 
 <% end %>
+</div>

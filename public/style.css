@@ -10,21 +10,46 @@
   flex-grow: 1;
 }
 
-
+.logo {
+  font-family: Futura, sans-serif;
+  margin-left: 120px;
+  margin-top: 40px;
+}
 
 
 .animal {
-  border: 5px double;
+  border: 5px solid;
   margin: 0 35px 30px 0;
   width: 200px;
-  padding: 25px;
+  padding: 10px 20px 20px 20px;
   display: inline-block;
+  font-family: "Gill Sans", sans-serif;
+}
+
+.title {
+  margin-top: 90px;
+  margin-left: 180px;
+  font-family: "Gill Sans", sans-serif;
 }
 
 
 .animal_form {
+  margin-top: 30px;
   margin-left: 180px;
   text-align: left;
   display: inline-block;
   width: 160px;
+  font-family: "Gill Sans", sans-serif;
+}
+
+.animal_info {
+  margin-top: 30px;
+  margin-left: 180px;
+  text-align: left;
+  display: inline-block;
+  font-family: "Gill Sans", sans-serif;
+}
+
+.animal_form .form_padding {
+  margin: 60px 0;
 }
