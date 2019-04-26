@@ -18,6 +18,12 @@ animal1 = Animal.new({
   "vet_id" => vet1.id
   })
 
-  animal1.save()
+animal1.save()
 
-  p animal1.vet()
+p animal1
+
+animal1.name = "Oscar"
+
+animal1.update()
+
+p animal1
