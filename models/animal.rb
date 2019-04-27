@@ -6,12 +6,12 @@ class Animal
   attr_accessor( :name, :date_of_birth, :type, :treatment_notes, :vet_id )
 
   def initialize( options )
-    @id = options['id'].to_i
+    @id = options['id'].to_i if options['id']
     @name = options['name']
     @date_of_birth = options['date_of_birth']
     @type = options['type']
     @treatment_notes = options['treatment_notes']
-    @vet_id = options['vet_id']
+    @vet_id = options['vet_id'].to_i if options['vet_id']
   end
 
   def save()

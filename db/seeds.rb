@@ -35,4 +35,4 @@ animal2 = Animal.new({
 animal1.save()
 animal2.save()
 
-p animal2.vet
+vet2.delete()

@@ -7,7 +7,11 @@
     <h3><%= animal.name() %></h3>
     <p>DoB: <%= animal.date_of_birth() %></p>
     <p>Type: <%= animal.type() %></p>
-    <p>Vet: <%= animal.vet.name() %></p>
+    <p>Vet: <%  if animal.vet_id != nil %>
+      <%= animal.vet.name() %>
+      <% else %>
+       <u>Unassigned</u></p>
+      <% end %>
     <p><a href="/animals/<%= animal.id %>"><%=animal.name()%>'s Profile</a></p>
   </div>
 
