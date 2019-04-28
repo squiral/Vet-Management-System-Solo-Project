@@ -67,6 +67,13 @@ class Vet
     return vet_data.map { |vet| Vet.new(vet) }
   end
 
+  def animals()
+    sql = "SELECT * FROM animals
+    WHERE vet_id = $1"
+    values = [@id]
+    results = SqlRunner.run(sql, values)
+    return results.map { |animal| Animal.new(animal) }
+  end
 
 
 

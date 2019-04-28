@@ -54,9 +54,9 @@ class Animal
       vet_id
     ) =
     (
-      $1, $2, $3, $4
+      $1, $2, $3, $4, $5
     )
-    WHERE id = $5"
+    WHERE id = $6"
     values = [@name, @date_of_birth, @type, @treatment_notes, @vet_id, @id]
     SqlRunner.run(sql, values)
   end

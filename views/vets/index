@@ -1,0 +1,17 @@
+<h2 class="title">Veterinarians</h2>
+
+<div class="animal_info">
+<% @vets.each do |vet| %>
+
+  <div class="animal">
+    <h3><%= vet.name() %></h3>
+    Vet: <%  if vet.vet_id != nil %>
+      <%= vet.vet.name() %>
+      <% else %>
+         <b>Unassigned</b>
+      <% end %>
+    <p><a href="/vets/<%= animal.id %>"><%=animal.name()%>'s Profile</a></p>
+  </div>
+
+<% end %>
+</div>

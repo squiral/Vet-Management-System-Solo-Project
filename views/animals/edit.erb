@@ -1,3 +1,31 @@
-<form class="/animals/" action="index.html" method="post">
+<h2 class="title">Update Animal</h2>
+<form action="/animals/<%= @animal.id %>" method="post" class="animal_form">
+
+  <label for="name-field" class="form_padding">Name:</label>
+  <input type="text" name="name" required id="name-field" value="<%= @animal.name %>"/>
+
+  <label for="date_of_birth-field" class="form_padding">Date of Birth:</label>
+  <input type="text" name="date_of_birth" id="date_of_birth-field" value="<%= @animal.date_of_birth %>"/>
+
+  <label for="type-field" class="form_padding">Type:</label>
+  <input type="text" name="type" id="type-field" value="<%= @animal.type %>"/>
+
+  <label for="vet-select" class="form_padding">Select Veterinarian:</label>
+  <select name="vet_id" id="vet_select" selected="<%= @animal.vet_id %>">
+    <% @vets.each do |vet| %>
+      <% if vet.id == @animal.vet_id %>
+        <option value=<%= vet.id %> selected><%= vet.name.capitalize %></option>
+      <% else %>
+        <option value=<%= vet.id %>><%= vet.name %></option>
+      <% end %>
+    <% end %>
+  </select>
+
+  <label for="treatment_notes-field" class="form_padding">Treatment Notes:</label>
+  <textarea name="treatment_notes" rows="8" cols="80" value=<%= @animal.treatment_notes %>></textarea>
+
+  <input type="submit" value="Register" class="form_padding">
+
+
 
 </form>

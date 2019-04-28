@@ -30,3 +30,26 @@ post '/animals' do
   @animal.save
   erb(:"animals/create")
 end
+
+#edit
+
+get '/animals/:id/edit' do
+  @animal = Animal.find( params[:id] )
+  @vets = Vet.all
+  erb(:"animals/edit")
+end
+
+#update
+
+post '/animals/:id' do
+  Animal.new( params ).update
+  redirect to 'animals'
+end
+
+#destroy
+
+post '/animals/:id/delete' do
+  animal = Animal.find( params[:id] )
+  animal.delete()
+  erb(:"animals/destroy")
+end

@@ -13,6 +13,7 @@ vet2 = Vet.new({
   "name" => "Dr. Russell",
 })
 
+
 vet1.save()
 vet2.save()
 
@@ -32,7 +33,16 @@ animal2 = Animal.new({
   "vet_id" => vet2.id
   })
 
+  animal3 = Animal.new({
+    "name" => "Calvin",
+    "date_of_birth" => "22/04/15",
+    "type" => "Snake",
+    "treatment_notes" => "Needs constant treats",
+    "vet_id" => vet2.id
+    })
+
 animal1.save()
 animal2.save()
+animal3.save()
 
-vet2.delete()
+p vet2.animals()
