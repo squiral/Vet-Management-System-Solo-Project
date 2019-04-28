@@ -1,5 +1,5 @@
 
-#menu {
+/* .menu {
   width: 220px;
   display: flex;
   margin: 0 auto;
@@ -7,7 +7,20 @@
 
 .menu-item {
   display: inline-block;
-  flex-grow: 1;
+  float: left;
+  padding: 8px;
+} */
+
+nav {
+  padding: 0px;
+  margin: 0px;
+  padding-right: 20px;
+}
+
+nav li a {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  display: inline;
 }
 
 .logo {

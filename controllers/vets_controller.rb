@@ -11,3 +11,23 @@ get '/vets' do
   @vets = Vet.all()
   erb(:"vets/index")
 end
+
+#new
+
+get '/vets/new' do
+  @animals = Animal.all()
+  erb(:"vets/new")
+end
+
+#show
+
+get '/vets/:id' do
+  @vet = Vet.find( params[:id] )
+  erb(:"vets/show")
+end
+
+#create
+
+post '/vets' do
+
+end

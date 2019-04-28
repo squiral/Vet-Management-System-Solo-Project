@@ -3,7 +3,7 @@
 
   <h3>
     <%  if @animal.vet_id != nil %>
-      <%= @animal.vet.name() %>
+      <a href='/vets/<%= @animal.vet.id %>'><%= @animal.vet.name() %></a>
     <% else %>
        <b>Unassigned</b>
     <% end %>

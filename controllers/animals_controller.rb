@@ -11,6 +11,8 @@ get '/animals' do
   erb(:"animals/index")
 end
 
+#new
+
 get '/animals/new' do
   @vets = Vet.all()
   erb(:"animals/new")

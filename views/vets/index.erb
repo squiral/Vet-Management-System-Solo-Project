@@ -1,0 +1,16 @@
+<h2 class="title">Veterinarians</h2>
+
+<div class="animal_info">
+<% @vets.each do |vet| %>
+
+  <div class="animal">
+    <h3><%= vet.name() %></h3>
+    <p>Treating:
+       <% vet.animals.each do |animal| %>
+          <a href='/animals/<%= animal.id %>'><%= animal.name %></a>
+      <% end %></p>
+    <p><a href="/vets/<%= vet.id %>"><%= vet.name()%>'s Profile</a></p>
+  </div>
+
+<% end %>
+</div>

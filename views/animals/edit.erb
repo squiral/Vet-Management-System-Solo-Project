@@ -1,4 +1,4 @@
-<h2 class="title">Update Animal</h2>
+<h2 class="title">Update <%= @animal.name.capitalize %> the <%= @animal.type.capitalize %></h2>
 <form action="/animals/<%= @animal.id %>" method="post" class="animal_form">
 
   <label for="name-field" class="form_padding">Name:</label>
@@ -22,9 +22,9 @@
   </select>
 
   <label for="treatment_notes-field" class="form_padding">Treatment Notes:</label>
-  <textarea name="treatment_notes" rows="8" cols="80" value=<%= @animal.treatment_notes %>></textarea>
+  <textarea name="treatment_notes" rows="8" cols="80" value=<%= @animal.treatment_notes %>><%= @animal.treatment_notes %></textarea>
 
-  <input type="submit" value="Register" class="form_padding">
+  <input type="submit" value="Update" class="form_padding">
 
 
 
