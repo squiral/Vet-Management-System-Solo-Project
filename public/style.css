@@ -5,16 +5,18 @@ body {
 }
 
 nav {
+  display: flex;
   padding: 0px;
-  margin: 0px;
+  margin-left: 160px;
+  margin-right: 160px;
   padding-right: 25px;
+  justify-content: space-between;
 }
 
 nav li {
   font-size: 20px;
   font-family: Futura, sans-serif;
   margin-bottom: 15px;
-  margin-left: 120px;
   text-transform: uppercase;
   display: inline-block;
 }
@@ -29,14 +31,14 @@ a, a:link, a:visited {
 }
 
 a:hover {
-  color: #d6aa71;
+  color: #edbb47;
 }
 
 hr {
   margin-left: 120px;
   margin-right: 120px;
   border: 3px solid;
-  border-color: #d6aa71;
+  border-color: #edbb47;
 
 }
 
@@ -45,6 +47,7 @@ hr {
   font-family: Futura, sans-serif;
   margin-left: 120px;
   margin-top: 40px;
+  margin-bottom: 25px;
 }
 
 
@@ -58,6 +61,25 @@ hr {
   padding: 10px 20px 20px 20px;
   display: inline-block;
   font-family: Futura, sans-serif;
+}
+
+.index-animal {
+  border: 5px solid;
+  border-color: #d6aa71;
+  margin: 0 35px 30px 0;
+  background-color: #d6aa71;
+  color: white;
+  width: 200px;
+  padding: 10px 20px 20px 20px;
+  display: inline-block;
+  font-family: Futura, sans-serif;
+}
+
+.index-animal a {
+  margin: 20px 0px 0px 0px;
+  padding: 5px 10px;
+  background-color: white;
+  color: #edbb47;
 }
 
 .title {
@@ -92,4 +114,6 @@ hr {
 
 #unassigned {
   color: #f27454;
+  padding: 3px 10px;
+  background-color: white;
 }

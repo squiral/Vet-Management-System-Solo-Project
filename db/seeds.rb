@@ -46,3 +46,5 @@ animal2.save()
 animal3.save()
 
 vet2.delete()
+
+p Animal.unassigned()

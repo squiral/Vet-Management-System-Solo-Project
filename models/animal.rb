@@ -88,6 +88,14 @@ class Animal
     return animal
   end
 
+  def self.unassigned()
+    sql = "SELECT * FROM animals
+    WHERE vet_id IS NULL"
+    unassigned_data = SqlRunner.run(sql)
+    unassigned_animals = map_items(unassigned_data)
+    return unassigned_animals
+  end
+
 
 
 
