@@ -70,7 +70,7 @@ hr {
   background-color: #d6aa71;
   color: white;
   width: 200px;
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 20px 30px;
   display: inline-block;
   font-family: Futura, sans-serif;
 }
@@ -82,9 +82,14 @@ hr {
   color: #5384a3;
 }
 
+.index-animal a:hover {
+  color: #edbb47;
+}
+
+
 .title {
   color: #e0daaa;
-  margin-top: 90px;
+  margin-top: 50px;
   margin-left: 180px;
   font-family: Futura, sans-serif;
 }
@@ -100,11 +105,25 @@ hr {
 }
 
 .animal_info {
-  margin-top: 30px;
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 50px;
   margin-left: 180px;
   text-align: left;
   display: inline-block;
   font-family: Futura, sans-serif;
+  color: #edbb47;
+}
+
+
+.index_animal_info {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  margin-left: 180px;
+  text-align: left;
+  display: inline-block;
+  font-family: Futura, sans-serif;
+  color: #edbb47;
 }
 
 

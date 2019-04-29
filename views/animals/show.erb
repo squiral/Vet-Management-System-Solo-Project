@@ -1,11 +1,11 @@
-<h2 class="title"> <%= @animal.name.capitalize %></h2>
+<h1 class="title"> <%= @animal.name.capitalize %></h1>
 <div class="animal_info">
 
   <h3>
     <%  if @animal.vet_id != nil %>
       <a href='/vets/<%= @animal.vet.id %>'><%= @animal.vet.name() %></a>
     <% else %>
-       <b>Unassigned</b>
+       <b id="unassigned">Unassigned</b>
     <% end %>
   </h3>
 
