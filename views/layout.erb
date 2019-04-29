@@ -3,15 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Marigold Vet Clinic</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" type="text/css" href="/style.css">
   </head>
   <body>
     <h1 class="logo">Marigold Vet Clinic</h1>
     <nav>
-      <li><a href='/animals'>Animals</a></li>
-      <li><a href='/animals/new'>Register Animal</a></li>
-      <li><a href='/vets'>Veterinarians</a></li>
+      <li><a class="nav-links" href='/animals'>Animals</a></li>
+      <li><a class="nav-links" href='/animals/new'>Register Animal</a></li>
+      <li><a class="nav-links" href='/vets'>Veterinarians</a></li>
     </nav>
+    <hr>
     <%= yield %>
+
   </body>
 </html>

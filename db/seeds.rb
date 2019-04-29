@@ -45,4 +45,4 @@ animal1.save()
 animal2.save()
 animal3.save()
 
-p vet2.animals()
+vet2.delete()

@@ -51,7 +51,7 @@ end
 #destroy
 
 post '/animals/:id/delete' do
-  animal = Animal.find( params[:id] )
-  animal.delete()
+  @animal = Animal.find( params[:id] )
+  @animal.delete()
   erb(:"animals/destroy")
 end

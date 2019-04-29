@@ -1,1 +1,10 @@
 <h2 class="title"><%= @vet.name %></h2>
+<div class="animal_info">
+  <p>Treating:
+    <ul>
+     <% @vet.animals.each do |animal| %>
+        <li><a href='/animals/<%= animal.id %>'><%= animal.name %></a></li>
+    <% end %>
+    </ul>
+  </p>
+</div>

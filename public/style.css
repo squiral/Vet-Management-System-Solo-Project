@@ -1,29 +1,47 @@
 
-/* .menu {
-  width: 220px;
-  display: flex;
-  margin: 0 auto;
-}
 
-.menu-item {
-  display: inline-block;
-  float: left;
-  padding: 8px;
-} */
+body {
+  background-color: #5384a3;
+}
 
 nav {
   padding: 0px;
   margin: 0px;
-  padding-right: 20px;
+  padding-right: 25px;
+}
+
+nav li {
+  font-size: 20px;
+  font-family: Futura, sans-serif;
+  margin-bottom: 15px;
+  margin-left: 120px;
+  text-transform: uppercase;
+  display: inline-block;
 }
 
 nav li a {
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  display: inline;
+  color: #d6aa71;
+}
+
+a, a:link, a:visited {
+  color: #e0daaa;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #d6aa71;
+}
+
+hr {
+  margin-left: 120px;
+  margin-right: 120px;
+  border: 3px solid;
+  border-color: #d6aa71;
+
 }
 
 .logo {
+  color: #edbb47;
   font-family: Futura, sans-serif;
   margin-left: 120px;
   margin-top: 40px;
@@ -32,17 +50,21 @@ nav li a {
 
 .animal {
   border: 5px solid;
+  border-color: #d6aa71;
   margin: 0 35px 30px 0;
+  background-color: #d6aa71;
+  color: white;
   width: 200px;
   padding: 10px 20px 20px 20px;
   display: inline-block;
-  font-family: "Gill Sans", sans-serif;
+  font-family: Futura, sans-serif;
 }
 
 .title {
+  color: #e0daaa;
   margin-top: 90px;
   margin-left: 180px;
-  font-family: "Gill Sans", sans-serif;
+  font-family: Futura, sans-serif;
 }
 
 
@@ -52,7 +74,7 @@ nav li a {
   text-align: left;
   display: inline-block;
   width: 160px;
-  font-family: "Gill Sans", sans-serif;
+  font-family: Futura, sans-serif;
 }
 
 .animal_info {
@@ -60,9 +82,14 @@ nav li a {
   margin-left: 180px;
   text-align: left;
   display: inline-block;
-  font-family: "Gill Sans", sans-serif;
+  font-family: Futura, sans-serif;
 }
+
 
 .animal_form .form_padding {
   margin: 60px 0;
+}
+
+#unassigned {
+  color: #f27454;
 }

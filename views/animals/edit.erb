@@ -25,7 +25,7 @@
   <textarea name="treatment_notes" rows="8" cols="80" value=<%= @animal.treatment_notes %>><%= @animal.treatment_notes %></textarea>
 
   <input type="submit" value="Update" class="form_padding">
-
-
-
 </form>
+
+<form  action="/animals/<%= @animal.id %>/delete" method="post" class="animal_form">
+  <input type="submit" value="Delete" class="form_padding">

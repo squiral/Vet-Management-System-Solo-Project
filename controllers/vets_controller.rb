@@ -29,5 +29,7 @@ end
 #create
 
 post '/vets' do
-
+  @vet = Vet.new( params )
+  @vet.save
+  erb(:"vets/create")
 end
