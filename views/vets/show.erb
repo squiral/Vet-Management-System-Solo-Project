@@ -7,4 +7,9 @@
     <% end %>
     </ul>
   </p>
+
+  <form  action="/vets/<%= @vet.id %>/delete" method="post">
+    <input type="submit" value="Delete">
+  </form>
+
 </div>

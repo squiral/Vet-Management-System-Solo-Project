@@ -79,7 +79,7 @@ hr {
   margin: 20px 0px 0px 0px;
   padding: 5px 10px;
   background-color: white;
-  color: #edbb47;
+  color: #5384a3;
 }
 
 .title {
@@ -94,8 +94,8 @@ hr {
   margin-top: 30px;
   margin-left: 180px;
   text-align: left;
-  display: inline-block;
-  width: 160px;
+  width: 200px;
+  display: block;
   font-family: Futura, sans-serif;
 }
 
