@@ -1,4 +1,4 @@
-<h2 class="title">Animals</h2>
+<h2 class="animal-title">Animals</h2>
 
 <div class="index_animal_info">
 <% @animals.each do |animal| %>
@@ -7,11 +7,13 @@
     <h2><%= animal.name() %></h2>
     <p>DoB: <%= animal.date_of_birth() %></p>
     <p>Type: <%= animal.type() %></p>
+    <div class="vet-assigned">
     Vet: <%  if animal.vet_id != nil %>
       <%= animal.vet.name() %>
       <% else %>
          <b id="unassigned">Unassigned</b>
       <% end %>
+    </div>
     <p><a href="/animals/<%= animal.id %>"><%=animal.name()%>'s Profile</a></p>
   </div>
 

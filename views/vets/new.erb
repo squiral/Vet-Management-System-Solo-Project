@@ -4,10 +4,13 @@
   <input type="text" name="name" required id="name-field"/>
   <br>
   <br>
-  <label for="assign-animals" class="form_padding">Assign Animals (optional):</label>
-  <% @unassigned_animals.each do |animal| %>
-    <label for=<%= animal.name %>><%= animal.name.capitalize %></label>
-    <input type="checkbox" name=<%= animal.name %> value=<%= animal.id %>>
+  <% if @unassigned_animals != [] %>
+    <label for="assign-animals" class="form_padding">Assign Animals (optional):</label>
+    <br>
+    <% @unassigned_animals.each do |animal| %>
+      <label for=<%= animal.name %>><%= animal.name.capitalize %></label>
+      <input type="checkbox" name="chosen_pets[]" value=<%= animal.id %>>
+    <% end %>
   <% end %>
   <br>
   <input type="submit" value="Register" class="form_padding">

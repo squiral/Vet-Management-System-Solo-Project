@@ -3,6 +3,7 @@ require('sinatra/contrib/all')
 require_relative('../models/vet')
 require_relative('../models/animal')
 also_reload('../models/*')
+require('pry')
 
 
 #index
@@ -30,9 +31,6 @@ end
 
 post '/vets' do
   @vet = Vet.new( params )
-  @animal = Animal.find( params )
-  @animal.vet_id = @vet.id
-  @animal.update
   @vet.save
   erb(:"vets/create")
 end
@@ -41,15 +39,16 @@ end
 
 get '/vets/:id/edit' do
   @vet = Vet.find( params[:id] )
-  @animals = Animal.all
+  @unassigned_animals = Animal.unassigned()
   erb(:"vets/edit")
 end
 
 #update
 
 post '/vets/:id' do
-  Vet.new( params ).update
-  redirect to 'vets'
+  @vet = Vet.new( params )
+  @vet.update()
+  erb(:"vets/update")
 end
 
 #destroy

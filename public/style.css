@@ -51,22 +51,37 @@ hr {
 }
 
 
-.animal {
+.index-vet {
+  font-size: 15px;
   border: 5px solid;
-  border-color: #d6aa71;
-  margin: 0 35px 30px 0;
-  background-color: #d6aa71;
+  border-color: #B2BD7E;
+  margin: 0 30px 30px 0;
+  background-color: #B2BD7E;
   color: white;
-  width: 200px;
+  width: 220px;
+  height: 230px;
   padding: 10px 20px 20px 20px;
-  display: inline-block;
   font-family: Futura, sans-serif;
+  overflow: auto;
+}
+
+.index-vet a {
+  margin: 40px 0px 0px 0px;
+  padding: 5px 10px;
+  background-color: white;
+  color: #5384a3;
+  font-size: 20px;
+}
+
+.index-vet a:hover {
+  color: white;
+  background-color: #5384a3;
 }
 
 .index-animal {
   border: 5px solid;
   border-color: #d6aa71;
-  margin: 0 35px 30px 0;
+  margin: 0 30px 30px 0;
   background-color: #d6aa71;
   color: white;
   width: 200px;
@@ -76,14 +91,16 @@ hr {
 }
 
 .index-animal a {
-  margin: 20px 0px 0px 0px;
+  margin: 40px 0px 0px 0px;
   padding: 5px 10px;
   background-color: white;
   color: #5384a3;
+  font-size: 20px;
 }
 
 .index-animal a:hover {
   color: #edbb47;
+  background-color: #5384a3;
 }
 
 
@@ -92,6 +109,24 @@ hr {
   margin-top: 50px;
   margin-left: 180px;
   font-family: Futura, sans-serif;
+}
+
+.animal-title {
+  color: white;
+  margin-top: 40px;
+  margin-left: 180px;
+  font-family: Futura, sans-serif;
+  background-color: #d6aa71;
+  padding: 5px 20px;
+}
+
+.vet-title {
+  color: white;
+  margin-top: 40px;
+  margin-left: 180px;
+  font-family: Futura, sans-serif;
+  background-color: #B2BD7E;
+  padding: 5px 20px;
 }
 
 
@@ -117,6 +152,31 @@ hr {
   font-family: Futura, sans-serif;
 }
 
+
+.index_animal_info {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  margin-left: 180px;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  font-family: Futura, sans-serif;
+  color: #edbb47;
+}
+
+.index_vet_info {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  margin-left: 180px;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  font-family: Futura, sans-serif;
+  color: #edbb47;
+}
+
 .animal_info {
   font-size: 20px;
   margin-top: 5px;
@@ -129,23 +189,40 @@ hr {
 }
 
 
-.index_animal_info {
-  margin-top: 10px;
-  margin-bottom: 50px;
-  margin-left: 180px;
-  text-align: left;
-  display: inline-block;
-  font-family: Futura, sans-serif;
-  color: #edbb47;
-}
-
-
 .animal_form .form_padding {
-  margin: 60px 0;
+  margin: 10px 0;
 }
 
 #unassigned {
   color: #f27454;
   padding: 3px 10px;
   background-color: white;
+}
+
+#animal {
+  padding: 2px 6px;
+  margin: 10px;
+}
+
+#vet-link a:hover {
+  color: #f27454;
+}
+
+.index-animal .vet-assigned {
+  justify-content: center;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #7C8953;
 }

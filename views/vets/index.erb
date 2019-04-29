@@ -1,14 +1,14 @@
-<h2 class="title">Veterinarians</h2>
+<h2 class="vet-title">Veterinarians</h2>
 
-<div class="animal_info">
+<div class="index_vet_info">
 <% @vets.each do |vet| %>
 
-  <div class="animal">
-    <h3><%= vet.name() %></h3>
+  <div class="index-vet">
+    <h2><%= vet.name() %></h2>
     <p>Treating:
       <ul>
        <% vet.animals.each do |animal| %>
-          <li><a href='/animals/<%= animal.id %>'><%= animal.name %></a></li>
+          <li><a id="animal" href='/animals/<%= animal.id %>'><%= animal.name %></a></li>
       <% end %>
       </ul></p>
     <p><a href="/vets/<%= vet.id %>"><%= vet.name()%>'s Profile</a></p>

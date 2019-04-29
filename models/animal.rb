@@ -96,6 +96,15 @@ class Animal
     return unassigned_animals
   end
 
+  def self.find_pets_by_vet(vet_id)
+    sql = "SELECT * from animals
+    WHERE vet_id = $1"
+    values = [@vet_id]
+    animal_data = SqlRunner.run(sql, values)
+    array_of_animals = map_items(animal_data)
+    return array_of_animals
+  end
+
 
 
 

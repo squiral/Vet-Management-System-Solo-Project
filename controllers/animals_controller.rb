@@ -44,8 +44,9 @@ end
 #update
 
 post '/animals/:id' do
-  Animal.new( params ).update
-  redirect to 'animals'
+  @animal = Animal.new( params )
+  @animal.update
+  erb(:"animals/update")
 end
 
 #destroy

@@ -1,12 +1,14 @@
-<h2 class="title"><%= @vet.name %></h2>
+<h2 class="vet-title"><%= @vet.name %></h2>
 <div class="animal_info">
   <p>Treating:
-    <ul>
-     <% @vet.animals.each do |animal| %>
-        <li><a href='/animals/<%= animal.id %>'><%= animal.name %></a></li>
-    <% end %>
-    </ul>
+      <ul>
+       <% @vet.animals.each do |animal| %>
+          <li><a href='/animals/<%= animal.id %>'><%= animal.name %></a></li>
+      <% end %>
+      </ul>
   </p>
+
+  <p><a href="/vets/<%= @vet.id %>/edit">Edit Veterinarian</a></p>
 
   <form  action="/vets/<%= @vet.id %>/delete" method="post">
     <input type="submit" value="Delete">
