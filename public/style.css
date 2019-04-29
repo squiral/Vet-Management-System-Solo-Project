@@ -58,12 +58,13 @@ hr {
   margin: 0 30px 30px 0;
   background-color: #B2BD7E;
   color: white;
-  width: 220px;
+  width: 240px;
   height: 230px;
   padding: 10px 20px 20px 20px;
   font-family: Futura, sans-serif;
   overflow: auto;
 }
+
 
 .index-vet a {
   margin: 40px 0px 0px 0px;
@@ -76,6 +77,10 @@ hr {
 .index-vet a:hover {
   color: white;
   background-color: #5384a3;
+}
+
+.index-vet ul li {
+  padding: 3px;
 }
 
 .index-animal {
@@ -99,7 +104,7 @@ hr {
 }
 
 .index-animal a:hover {
-  color: #edbb47;
+  color: white;
   background-color: #5384a3;
 }
 
@@ -225,4 +230,40 @@ hr {
 
 ::-webkit-scrollbar-thumb {
   background: #7C8953;
+}
+
+.animal_info .edit-button {
+  margin: 10px;
+  padding:5px 15px;
+  font-family: Futura, sans-serif;
+  font-size: 15px;
+  color: white;
+  text-transform: uppercase;
+  background-color: #d6aa71;
+}
+
+.animal_info .edit-button:hover {
+  color: white;
+  background-color: #f27454;
+}
+
+input[type=submit] {
+    margin: 10px;
+    padding:5px 15px;
+    font-family: Futura, sans-serif;
+    font-size: 15px;
+    color: white;
+    text-transform: uppercase;
+    background-color: #d6aa71;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+
+}
+
+input[type=submit]:hover {
+  color: white;
+  background-color: #f27454;
+
 }
