@@ -10,15 +10,18 @@ nav {
   margin-left: 160px;
   margin-right: 160px;
   padding-right: 25px;
-  justify-content: space-between;
+  padding-left: 25px;
+  justify-content: space-around;
 }
 
 nav li {
-  font-size: 20px;
+  font-size: 18px;
   font-family: Futura, sans-serif;
   margin-bottom: 15px;
   text-transform: uppercase;
   display: inline-block;
+  padding-right: 25px;
+  padding-left: 25px;
 }
 
 nav li a {
@@ -50,6 +53,20 @@ hr {
   margin-bottom: 25px;
 }
 
+/* index vet */
+
+.index_vet_info {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  margin-left: 180px;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  font-family: Futura, sans-serif;
+  color: #edbb47;
+}
+
 
 .index-vet {
   font-size: 15px;
@@ -61,10 +78,10 @@ hr {
   width: 240px;
   height: 230px;
   padding: 10px 20px 20px 20px;
+  display: inline-block;
   font-family: Futura, sans-serif;
   overflow: auto;
 }
-
 
 .index-vet a {
   margin: 40px 0px 0px 0px;
@@ -81,6 +98,57 @@ hr {
 
 .index-vet ul li {
   padding: 3px;
+}
+
+/* vet title */
+
+.vet-title {
+  color: white;
+  margin-top: 40px;
+  margin-left: 180px;
+  font-family: Futura, sans-serif;
+  background-color: #B2BD7E;
+  padding: 5px 20px;
+}
+
+/* vet index titles */
+
+.vet-index-title {
+  color: white;
+  font-family: Futura, sans-serif;
+  background-color: #B2BD7E;
+  padding: 5px 20px;
+  width: 200px;
+}
+
+.register-vet-title {
+    display: flex;
+    justify-content: stretch;
+}
+
+.register-vet-title h2 {
+  color: white;
+  font-family: Futura, sans-serif;
+  background-color: #d6aa71;
+  padding: 5px 20px;
+}
+
+.register-vet-title h2:hover {
+  background-color: #edbb47;
+}
+
+/* index animal */
+
+.index_animal_info {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  margin-left: 180px;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  font-family: Futura, sans-serif;
+  color: #edbb47;
 }
 
 .index-animal {
@@ -108,6 +176,137 @@ hr {
   background-color: #5384a3;
 }
 
+/* animal title */
+
+.animal-title {
+    color: white;
+    margin-top: 40px;
+    margin-left: 180px;
+    font-family: Futura, sans-serif;
+    background-color: #d6aa71;
+    padding: 5px 20px;
+  }
+
+  /* animal index titles */
+
+.animal-index-title {
+  color: white;
+  font-family: Futura, sans-serif;
+  background-color: #d6aa71;
+  padding: 5px 20px;
+  width: 200px;
+}
+
+.register-animal-title {
+    display: flex;
+    justify-content: stretch;
+}
+
+.register-animal-title h2 {
+  color: white;
+  font-family: Futura, sans-serif;
+  background-color: #B2BD7E;
+  padding: 5px 20px;
+}
+
+.register-animal-title h2:hover {
+  background-color: #edbb47;
+}
+
+/* index owner */
+
+.index_owner_info {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  margin-left: 180px;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  font-family: Futura, sans-serif;
+  color: #edbb47;
+}
+
+.index-owner {
+  font-size: 15px;
+  border: 5px solid;
+  border-color: #f27454;
+  margin: 0 30px 30px 0;
+  background-color: #f27454;
+  color: white;
+  width: 240px;
+  height: 230px;
+  padding: 10px 20px 20px 20px;
+  display: inline-block;
+  font-family: Futura, sans-serif;
+  overflow: auto;
+}
+
+
+.index-owner a {
+  margin: 40px 0px 0px 0px;
+  padding: 5px 10px;
+  background-color: white;
+  color: #5384a3;
+  font-size: 20px;
+}
+
+.index-owner a:hover {
+  color: white;
+  background-color: #5384a3;
+}
+
+.index-owner ul li {
+  padding: 3px;
+}
+
+/* owner title */
+
+.owner-title {
+  color: white;
+  margin-top: 40px;
+  margin-left: 180px;
+  font-family: Futura, sans-serif;
+  background-color: #f27454;
+  padding: 5px 20px;
+}
+
+/* owner index titles */
+
+.owner-index-title {
+  color: white;
+  font-family: Futura, sans-serif;
+  background-color: #f27454;
+  padding: 5px 20px;
+  width: 200px;
+}
+
+.register-owner-title {
+    display: flex;
+    justify-content: stretch;
+}
+
+.register-owner-title h2 {
+  color: white;
+  font-family: Futura, sans-serif;
+  background-color: #d6aa71;
+  padding: 5px 20px;
+}
+
+.register-owner-title h2:hover {
+  background-color: #edbb47;
+}
+
+/* header */
+
+.header {
+  display: flex;
+  margin-top: 30px;
+  margin-left: 180px;
+  justify-content: stretch;
+
+}
+
 
 .title {
   color: #e0daaa;
@@ -117,23 +316,9 @@ hr {
   font-family: Futura, sans-serif;
 }
 
-.animal-title {
-  color: white;
-  margin-top: 40px;
-  margin-left: 180px;
-  font-family: Futura, sans-serif;
-  background-color: #d6aa71;
-  padding: 5px 20px;
-}
 
-.vet-title {
-  color: white;
-  margin-top: 40px;
-  margin-left: 180px;
-  font-family: Futura, sans-serif;
-  background-color: #B2BD7E;
-  padding: 5px 20px;
-}
+
+/* forms */
 
 
 .vet_form {
@@ -158,30 +343,6 @@ hr {
   font-family: Futura, sans-serif;
 }
 
-
-.index_animal_info {
-  margin-top: 10px;
-  margin-bottom: 50px;
-  margin-left: 180px;
-  text-align: left;
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  font-family: Futura, sans-serif;
-  color: #edbb47;
-}
-
-.index_vet_info {
-  margin-top: 10px;
-  margin-bottom: 50px;
-  margin-left: 180px;
-  text-align: left;
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  font-family: Futura, sans-serif;
-  color: #edbb47;
-}
 
 .animal_info {
   font-size: 20px;

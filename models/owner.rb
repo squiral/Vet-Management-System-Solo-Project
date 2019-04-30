@@ -88,6 +88,14 @@ class Owner
     return full_name
   end
 
+  def animals()
+    sql = "SELECT * FROM animals
+    WHERE owner_id = $1"
+    values = [@id]
+    results = SqlRunner.run(sql, values)
+    return results.map { |animal| Animal.new(animal) }
+  end
+
 
 
 

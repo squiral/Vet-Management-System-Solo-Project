@@ -1,0 +1,21 @@
+<div class="header">
+<h2 class="owner-index-title">Owners</h2>
+<a class="register-owner-title" href='/owners/new'><h2>Register Owner</h2></a>
+</div>
+
+<div class="index_owner_info">
+<% @owners.each do |owner| %>
+
+  <div class="index-owner">
+    <h2><%= owner.format_name() %></h2>
+    <p>Pets:
+      <ul>
+       <% owner.animals.each do |animal| %>
+          <li><a id="animal" href='/animals/<%= animal.id %>'><%= animal.name %></a></li>
+      <% end %>
+      </ul></p>
+    <p><a href="/owners/<%= owner.id %>"><%= owner.format_name()%>'s Profile</a></p>
+  </div>
+
+<% end %>
+</div>

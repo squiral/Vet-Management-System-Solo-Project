@@ -12,3 +12,17 @@ get '/owners' do
   @owners = Owner.all()
   erb(:"owners/index")
 end
+
+#new
+
+get '/owners/new' do
+  @owners = Owner.all()
+  erb(:"owners/new")
+end
+
+#show
+
+get '/owners/:id' do
+  @owner = Owner.find( params[:id] )
+  erb(:"owners/show")
+end
