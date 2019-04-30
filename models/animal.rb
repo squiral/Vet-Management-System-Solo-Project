@@ -1,4 +1,6 @@
 require_relative( '../db/sql_runner' )
+require('date')
+require('pry')
 
 class Animal
 
@@ -12,6 +14,7 @@ class Animal
     @type = options['type']
     @treatment_notes = options['treatment_notes']
     @vet_id = options['vet_id'].to_i if options['vet_id']
+    @owner_id = options['owner_id'].to_i if options['owner_id']
   end
 
   def save()
@@ -21,14 +24,15 @@ class Animal
       date_of_birth,
       type,
       treatment_notes,
-      vet_id
+      vet_id,
+      owner_id
     )
     VALUES
     (
-      $1, $2, $3, $4, $5
+      $1, $2, $3, $4, $5, $6
     )
     RETURNING id"
-    values = [@name, @date_of_birth, @type, @treatment_notes, @vet_id]
+    values = [@name, @date_of_birth, @type, @treatment_notes, @vet_id, @owner_id]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
@@ -51,13 +55,14 @@ class Animal
       date_of_birth,
       type,
       treatment_notes,
-      vet_id
+      vet_id,
+      owner_id
     ) =
     (
-      $1, $2, $3, $4, $5
+      $1, $2, $3, $4, $5, $6
     )
-    WHERE id = $6"
-    values = [@name, @date_of_birth, @type, @treatment_notes, @vet_id, @id]
+    WHERE id = $7"
+    values = [@name, @date_of_birth, @type, @treatment_notes, @vet_id, @owner_id, @id]
     SqlRunner.run(sql, values)
   end
 
@@ -104,6 +109,22 @@ class Animal
     array_of_animals = map_items(animal_data)
     return array_of_animals
   end
+
+
+  # convert DoB to age
+
+def convert_date_to_object
+  binding.pry
+  animal_date_obj = Date.strptime(@date_of_birth,'%m/%d/%Y')
+  return animal_date_obj
+end
+
+  # def age
+  # now = Time.now.utc.to_date
+  # now.year - birthday.year - (birthday.to_date.change(:year => now.year) > now ? 1 : 0)
+  # end
+
+  # calculate age from birth years
 
 
 

@@ -200,9 +200,9 @@ hr {
 }
 
 #unassigned {
-  color: #f27454;
+  color: white;
   padding: 3px 10px;
-  background-color: white;
+  background-color: #f27454;
 }
 
 #animal {
