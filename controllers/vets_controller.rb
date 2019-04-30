@@ -34,10 +34,13 @@ post '/vets' do
   @vet = Vet.new( params )
   @vet.save
 
-  for animal_id in params[:chosen_pets]
-    animal = Animal.find(animal_id)
-    animal.vet_id = @vet.id
-    animal.update()
+
+  if params[:chosen_pets] != nil
+    for animal_id in params[:chosen_pets]
+      animal = Animal.find(animal_id)
+      animal.vet_id = @vet.id
+      animal.update()
+    end
   end
 
   erb(:"vets/create")
@@ -57,10 +60,12 @@ post '/vets/:id' do
   @vet = Vet.new( params )
   @vet.update()
 
-  for animal_id in params[:chosen_pets]
-    animal = Animal.find(animal_id)
-    animal.vet_id = @vet.id
-    animal.update()
+  if params[:chosen_pets] != nil
+    for animal_id in params[:chosen_pets]
+      animal = Animal.find(animal_id)
+      animal.vet_id = @vet.id
+      animal.update()
+    end
   end
 
   erb(:"vets/update")

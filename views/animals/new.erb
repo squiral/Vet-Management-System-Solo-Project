@@ -16,6 +16,13 @@
         <% end %>
       </select>
 
+      <label for="owner-select" class="form_padding">Select Owner:</label>
+      <select name="owner_id" class="form_padding" id="owner_select">
+        <% @owners.each do |owner| %>
+          <option value=<%= owner.id %>><%= owner.format_name %></option>
+        <% end %>
+      </select>
+
       <br>
 
       <label for="treatment_notes-field" class="form_padding">Treatment Notes:</label>

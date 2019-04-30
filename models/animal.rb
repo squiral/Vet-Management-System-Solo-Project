@@ -5,7 +5,7 @@ require('pry')
 class Animal
 
   attr_reader( :id )
-  attr_accessor( :name, :date_of_birth, :type, :treatment_notes, :vet_id )
+  attr_accessor( :name, :date_of_birth, :type, :treatment_notes, :vet_id, :owner_id )
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
@@ -45,6 +45,11 @@ class Animal
   def vet()
     vet = Vet.find(@vet_id)
     return vet
+  end
+
+  def owner()
+    owner = Owner.find(@owner_id)
+    return owner
   end
 
   def update()
