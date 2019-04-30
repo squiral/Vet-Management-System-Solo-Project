@@ -2,10 +2,21 @@
 <div class="animal_info">
 
   <h4>
+
+    <%  if @animal.owner_id != nil %>
+      <a href='/owners/<%= @animal.owner_id %>'>Owner: <%= @animal.owner.format_name %></a>
+    <% else %>
+       Owner: <b id="unassigned">N/A</b>
+    <% end %>
+
+
+  </h4>
+
+  <h4>
     <%  if @animal.vet_id != nil %>
       <a href='/vets/<%= @animal.vet.id %>'><%= @animal.vet.name.upcase() %></a>
     <% else %>
-       <b id="unassigned">Unassigned</b>
+       <b id="unassigned">Not assigned to a vet</b>
     <% end %>
   </h4>
 
