@@ -2,6 +2,7 @@ require('sinatra')
 require('sinatra/contrib/all')
 require_relative('../models/vet')
 require_relative('../models/animal')
+require_relative('../models/owner')
 also_reload('../models/*')
 require('pry')
 
@@ -61,7 +62,7 @@ post '/vets/:id' do
     animal.vet_id = @vet.id
     animal.update()
   end
-  
+
   erb(:"vets/update")
 end
 

@@ -56,6 +56,38 @@ class Owner
     SqlRunner.run(sql, values)
   end
 
+  def delete()
+    sql = "DELETE FROM owners
+    WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
+  def self.all()
+    sql = "SELECT * FROM owners"
+    owner_data = SqlRunner.run(sql)
+    owners = map_items(owner_data)
+    return owners
+  end
+
+  def self.map_items(owner_data)
+    return owner_data.map { |owner| Owner.new(owner)  }
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM owners
+    WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values).first
+    owner = Owner.new(result)
+    return owner
+  end
+
+  def format_name
+    full_name = @first_name.capitalize + " " + @last_name.capitalize
+    return full_name
+  end
+
 
 
 

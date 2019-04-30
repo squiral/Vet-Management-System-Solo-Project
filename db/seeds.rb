@@ -26,7 +26,18 @@ owner1 = Owner.new({
   "email_address" => "calumn.hotstuff@hotmail.co.uk"
   })
 
+
+
+owner2 = Owner.new({
+  "first_name" => "Sarah",
+  "last_name" => "Miller",
+  "phone_number" => "01620892485",
+  "email_address" => "s.miller@gmail.com"
+  })
+
+
 owner1.save()
+owner2.save()
 
 animal1 = Animal.new({
   "name" => "Alfie",
@@ -43,7 +54,7 @@ animal2 = Animal.new({
   "type" => "Cat",
   "treatment_notes" => " ",
   "vet_id" => vet2.id,
-  "owner_id" => owner1.id
+  "owner_id" => owner2.id
   })
 
 animal3 = Animal.new({
@@ -52,18 +63,11 @@ animal3 = Animal.new({
   "type" => "Snake",
   "treatment_notes" => "Needs constant treats",
   "vet_id" => vet2.id,
-  "owner_id" => owner1.id
+  "owner_id" => owner2.id
   })
 
 animal1.save()
 animal2.save()
 animal3.save()
 
-
-p owner1.first_name()
-
-owner1.first_name = "John"
-
-owner1.update()
-
-p owner1.first_name()
+p owner2.format_name
