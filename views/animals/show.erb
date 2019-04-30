@@ -1,13 +1,13 @@
 <h2 class="animal-title"> <%= @animal.name.capitalize %></h2>
 <div class="animal_info">
 
-  <h3>
+  <h4>
     <%  if @animal.vet_id != nil %>
-      <a href='/vets/<%= @animal.vet.id %>'><%= @animal.vet.name() %></a>
+      <a href='/vets/<%= @animal.vet.id %>'><%= @animal.vet.name.upcase() %></a>
     <% else %>
        <b id="unassigned">Unassigned</b>
     <% end %>
-  </h3>
+  </h4>
 
   <p>DoB: <%= @animal.date_of_birth() %></p>
   <p>Type: <%= @animal.type() %></p>
