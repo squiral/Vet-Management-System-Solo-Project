@@ -1,5 +1,5 @@
 <h2 class="animal-title">Register Animal</h2>
-  <form class="animal_form" action="/animals" method="post">
+  <form class="form" action="/animals" method="post">
       <label for="name-field" class="form_padding">Name:</label>
       <input type="text" name="name" required class="form_padding" id="name-field"/>
 
@@ -22,8 +22,6 @@
           <option value=<%= owner.id %>><%= owner.format_name %></option>
         <% end %>
       </select>
-
-      <br>
 
       <label for="treatment_notes-field" class="form_padding">Treatment Notes:</label>
       <textarea name="treatment_notes" class="form_padding" rows="8" cols="80">Add notes here</textarea>

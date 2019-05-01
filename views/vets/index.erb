@@ -5,15 +5,19 @@
 
 <div class="index_vet_info">
 <% @vets.each do |vet| %>
-
   <div class="index-vet">
     <h2><%= vet.name() %></h2>
     <p>Treating:
-      <ul>
-       <% vet.animals.each do |animal| %>
-          <li><a id="animal" href='/animals/<%= animal.id %>'><%= animal.name %></a></li>
-      <% end %>
-      </ul></p>
+        <% if vet.animals.count > 0 %>
+          <ul>
+           <% vet.animals.each do |animal| %>
+              <li><a id="animal" href='/animals/<%= animal.id %>'><%= animal.name %></a></li>
+          <% end %>
+          </ul>
+        <% else %>
+          <b id="unassigned">None Assigned</b>
+        <% end %>
+    </p>
     <p><a href="/vets/<%= vet.id %>"><%= vet.name()%>'s Profile</a></p>
   </div>
 

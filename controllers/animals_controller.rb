@@ -40,6 +40,7 @@ end
 get '/animals/:id/edit' do
   @animal = Animal.find( params[:id] )
   @vets = Vet.all
+  @owners = Owner.all()
   erb(:"animals/edit")
 end
 

@@ -2,6 +2,7 @@
 
 body {
   background-color: #5384a3;
+  margin: auto;
 }
 
 nav {
@@ -242,14 +243,14 @@ hr {
   overflow: auto;
 }
 
-
-.index-owner a {
+.profile_link a {
   margin: 40px 0px 0px 0px;
   padding: 5px 10px;
   background-color: white;
   color: #5384a3;
   font-size: 20px;
 }
+
 
 .index-owner a:hover {
   color: white;
@@ -326,20 +327,33 @@ hr {
   font-size: 20px;
   margin-top: 30px;
   margin-left: 180px;
+  margin-bottom: 50px;
   text-align: left;
-  width: 250px;
-  display: block;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
   font-family: Futura, sans-serif;
 }
 
-.animal_form {
+.unassigned_animals {
+  width: 350px;
+  display: flex;
+  wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+
+.form {
   color: #edbb47;
   font-size: 20px;
   margin-top: 30px;
   margin-left: 180px;
+  margin-bottom: 50px;
   text-align: left;
-  width: 170px;
-  display: block;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
   font-family: Futura, sans-serif;
 }
 
@@ -355,8 +369,22 @@ hr {
   color: #edbb47;
 }
 
+.form textarea {
+  width: 350px;
+}
 
-.animal_form .form_padding {
+.form input[type=submit] {
+  margin: 15px 0;
+  width: 100px;
+}
+
+.vet_form input[type=submit] {
+  margin: 20px 0;
+  width: 100px;
+}
+
+
+.form_padding {
   margin: 10px 0;
 }
 
@@ -364,6 +392,10 @@ hr {
   color: white;
   padding: 3px 10px;
   background-color: #f27454;
+}
+
+#unassigned a {
+  background-color: none;
 }
 
 #animal {
@@ -388,6 +420,11 @@ hr {
 
 ::-webkit-scrollbar-thumb {
   background: #7C8953;
+}
+
+.animal_info h4 a {
+  color: #7C8953;
+  background-color: white;
 }
 
 .animal_info .edit-button {

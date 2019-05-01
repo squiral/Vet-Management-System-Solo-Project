@@ -44,8 +44,8 @@ animal1 = Animal.new({
   "date_of_birth" => "10/01/2012",
   "type" => "Dog",
   "treatment_notes" => " ",
-  "vet_id" => vet1.id,
-  "owner_id" => owner1.id
+  "vet_id" => vet2.id,
+  "owner_id" => owner2.id
   })
 
 animal2 = Animal.new({
@@ -70,4 +70,4 @@ animal1.save()
 animal2.save()
 animal3.save()
 
-p owner2.format_name
+p vet1.animals.count

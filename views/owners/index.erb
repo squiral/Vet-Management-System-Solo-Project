@@ -9,12 +9,18 @@
   <div class="index-owner">
     <h2><%= owner.format_name() %></h2>
     <p>Pets:
-      <ul>
-       <% owner.animals.each do |animal| %>
-          <li><a id="animal" href='/animals/<%= animal.id %>'><%= animal.name %></a></li>
+      <% if owner.animals.count > 0 %>
+        <ul>
+         <% owner.animals.each do |animal| %>
+            <li><a id="animal" href='/animals/<%= animal.id %>'><%= animal.name %></a></li>
+        <% end %>
+        </ul>
+      <% else %>
+        <a href='/animals/new'><b id="unassigned">Register Pets</b></a>
       <% end %>
-      </ul></p>
-    <p><a href="/owners/<%= owner.id %>"><%= owner.format_name()%>'s Profile</a></p>
+    </p>
+
+    <p><a class="profile_link" href="/owners/<%= owner.id %>"><%= owner.format_name()%>'s Profile</a></p>
   </div>
 
 <% end %>
