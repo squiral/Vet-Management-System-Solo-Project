@@ -1,4 +1,7 @@
-<h2 class="title"><%= @owner.format_name %> Registered</h2>
+<h2 class="owner-title"><%= @owner.format_name %> Registered</h2>
 
-<a class="title" href="/animals/new">Register Animals</a>
-<a class="animal_info" href="/owners"><h3>Return to Owners</h3></a>
+<div class="form">
+<a id="unassigned" href="/animals/new">Register Animals</a>
+<br>
+<a class="update" href="/owners">Return to Owners</a>
+</div>

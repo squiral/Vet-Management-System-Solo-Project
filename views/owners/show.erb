@@ -1,0 +1,24 @@
+<div class="tables">
+
+  <table class="owner-table">
+    <thead class="owner-thead">
+      <tr>
+      <th colspan="2">Owner Information</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="owner-info">Name:</td>
+        <td class="owner-td"><%= @owner.format_name %></td>
+      </tr>
+      <tr>
+        <td class="owner-info">Phone Number:</td>
+        <td class="owner-td"><%= @owner.phone_number %></td>
+      </tr>
+      <tr>
+        <td class="owner-info">Email Address:</td>
+        <td class="owner-td"><%= @owner.email_address %></td>
+      </tr>
+    </tbody>
+    </table>
+</div>

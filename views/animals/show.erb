@@ -27,34 +27,36 @@
   </table>
 
 
-  <table>
-    <thead>
+  <table class="owner-table">
+    <thead class="owner-thead">
       <tr>
       <th colspan="2">Owner Information</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td class="info">Name:</td>
-        <td><%= @owner.format_name %></td>
+        <td class="owner-info">Name:</td>
+        <td class="owner-td"><%= @owner.format_name %></td>
       </tr>
       <tr>
-        <td class="info">Phone Number:</td>
-        <td><%= @owner.phone_number %></td>
+        <td class="owner-info">Phone Number:</td>
+        <td class="owner-td"><%= @owner.phone_number %></td>
       </tr>
       <tr>
-        <td class="info">Email Address:</td>
-        <td><%= @owner.email_address %></td>
+        <td class="owner-info">Email Address:</td>
+        <td class="owner-td"><%= @owner.email_address %></td>
       </tr>
     </tbody>
 
   </table>
 
-  <p><a class="update" href="/animals/<%= @animal.id %>/edit">Edit Animal</a></p>
+
+</div>
+<div class="animal_info">
+  <p><a class="edit-button" href="/animals/<%= @animal.id %>/edit">Edit Animal</a></p>
   <form  action="/animals/<%= @animal.id %>/delete" method="post">
     <input type="submit" value="Delete">
   </form>
-
 </div>
 
 
