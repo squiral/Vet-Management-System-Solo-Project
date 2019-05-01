@@ -24,6 +24,7 @@ end
 
 get '/animals/:id' do
   @animal = Animal.find( params[:id] )
+  @owner = @animal.owner
   erb(:"animals/show")
 end
 

@@ -1,4 +1,80 @@
-<h2 class="animal-title"> <%= @animal.name.capitalize %></h2>
+
+<h2 class="animal-title">Animal Info</h2>
+
+<div class="tables">
+
+  <table>
+    <thead>
+      <tr>
+      <th colspan="2"><%= @animal.name.capitalize %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="info">Type:</td>
+        <td><%= @animal.type %></td>
+      </tr>
+      <tr>
+        <td class="info">Date of Birth:</td>
+        <td><%= @animal.date_of_birth %></td>
+      </tr>
+      <tr>
+        <td class="info">Treatment Notes:</td>
+        <td><%= @animal.treatment_notes %></td>
+      </tr>
+    </tbody>
+
+  </table>
+
+
+  <table>
+    <thead>
+      <tr>
+      <th colspan="2">Owner Information</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="info">Name:</td>
+        <td><%= @owner.format_name %></td>
+      </tr>
+      <tr>
+        <td class="info">Phone Number:</td>
+        <td><%= @owner.phone_number %></td>
+      </tr>
+      <tr>
+        <td class="info">Email Address:</td>
+        <td><%= @owner.email_address %></td>
+      </tr>
+    </tbody>
+
+  </table>
+
+  <p><a class="update" href="/animals/<%= @animal.id %>/edit">Edit Animal</a></p>
+  <form  action="/animals/<%= @animal.id %>/delete" method="post">
+    <input type="submit" value="Delete">
+  </form>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <h2 class="animal-title"> <%= @animal.name.capitalize %></h2>
 <div class="animal_info">
 
 
@@ -29,4 +105,4 @@
     <input type="submit" value="Delete">
   </form>
 
-</div>
+</div> -->
