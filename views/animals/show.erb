@@ -15,6 +15,16 @@
         <td><%= @animal.type %></td>
       </tr>
       <tr>
+        <td class="info">Vet:</td>
+        <td>
+          <%  if @animal.vet_id != nil %>
+          <%= @animal.vet.name() %>
+          <% else %>
+             <a href='/vets'><b id="unassigned">Unassigned</b></a>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
         <td class="info">Date of Birth:</td>
         <td><%= @animal.date_of_birth %></td>
       </tr>

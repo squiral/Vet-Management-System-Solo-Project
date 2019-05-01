@@ -22,3 +22,11 @@
     </tbody>
     </table>
 </div>
+
+</div>
+<div class="animal_info">
+  <p><a class="edit-button" href="/owners/<%= @owner.id %>/edit">Edit Owner</a></p>
+  <form  action="/owners/<%= @owner.id %>/delete" method="post">
+    <input type="submit" value="Delete">
+  </form>
+</div>

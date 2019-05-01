@@ -34,3 +34,27 @@ post '/owners' do
   @owner.save
   erb(:"owners/create")
 end
+
+#edit
+
+get '/owners/:id/edit' do
+  @owner = Owner.find( params[:id] )
+  erb(:"owners/edit")
+end
+
+#update
+
+post '/owners/:id' do
+  @owner = Owner.new( params )
+  @owner.update
+  erb(:"owners/update")
+end
+
+
+#destroy
+
+post '/owners/:id/delete' do
+  @owner = Owner.find( params[:id] )
+  @owner.delete()
+  erb(:"owners/destroy")
+end
