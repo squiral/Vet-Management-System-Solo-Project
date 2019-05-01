@@ -414,8 +414,12 @@ th {
   width: 350px;
   display: flex;
   wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-direction: row;
+}
+
+.checkbox_container {
+  margin-left: 40px;
 }
 
 
