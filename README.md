@@ -12,12 +12,18 @@ To run application, enter into the terminal 'ruby app.rb' and visit localhost:45
 <b>Register Owner Page:</b>
 
 <p align="center">
-  <img src="https://i.imgur.com/sQii2Iq.png" width="800" title="Owner Page" alt="a screenshot of the register user page, displaying the input form to add the details for a new owner">
+  <img src="https://i.imgur.com/sQii2Iq.png" width="800" title="Register Owner Page" alt="a screenshot of the register user page, displaying the input form to add the details for a new owner">
 </p>
 
 
 <b>Owner Profile:</b>
 
 <p align="center">
-  <img src="https://i.imgur.com/gp4cTS0.png" width="800" title="Owner Page" alt="a screenshot of a user profile page, displaying all the information stored about that owner within a table structure">
+  <img src="https://i.imgur.com/gp4cTS0.png" width="800" title="Owner Profile" alt="a screenshot of a user profile page, displaying all the information stored about that owner within a table structure">
+</p>
+
+<b>Animal Profile:</b>
+
+<p align="center">
+  <img src="https://i.imgur.com/m6sHYgJ.png" width="800" title="Animal Profile" alt="a screenshot of an animal profile page, displaying all the information stored about that animal and its associated owner within a table structure">
 </p>
